@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://gpyu6ig33rbl"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_pht1y"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_vuujk"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_pht1y")
+script = ExtResource("1_vuujk")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 810.0
@@ -23,4 +23,5 @@ theme_override_font_sizes/font_size = 70
 text = "Quit
 "
 
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
