@@ -1,15 +1,26 @@
-[gd_scene format=3 uid="uid://gpyu6ig33rbl"]
+[gd_scene load_steps=2 format=3 uid="uid://gpyu6ig33rbl"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_pht1y"]
 
-[node name="Button" type="Button" parent="."]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pht1y")
+
+[node name="StartButton" type="Button" parent="."]
 offset_left = 810.0
 offset_top = 410.0
 offset_right = 1110.0
 offset_bottom = 560.0
+theme_override_font_sizes/font_size = 70
+text = "Start
+"
 
-[node name="Button2" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="."]
 offset_left = 810.0
 offset_top = 771.0
 offset_right = 1110.0
 offset_bottom = 921.0
+theme_override_font_sizes/font_size = 70
+text = "Quit
+"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
