@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://s4o2dk6ut583"]
+[gd_scene load_steps=9 format=3 uid="uid://s4o2dk6ut583"]
 
 [ext_resource type="Texture2D" uid="uid://bogtmgicwrjq8" path="res://Sprites/Background/Room_Builder_free_32x32.png" id="3_0bsnx"]
 [ext_resource type="PackedScene" uid="uid://bxxmbt1qxarmo" path="res://Scenes/character.tscn" id="3_bwh2j"]
+[ext_resource type="Texture2D" uid="uid://cbwug4x2m8qvi" path="res://Sprites/Background/school_floor.png" id="3_ff6b2"]
 [ext_resource type="Texture2D" uid="uid://1x78stexmpjr" path="res://Sprites/Background/Interiors_free_32x32.png" id="4_g6a2c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf63m"]
@@ -1342,17 +1343,31 @@ texture_region_size = Vector2i(32, 32)
 3:42/size_in_atlas = Vector2i(3, 2)
 3:42/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4j44"]
+texture = ExtResource("3_ff6b2")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_5pymt"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_mf63m")
 sources/2 = SubResource("TileSetAtlasSource_rhsnx")
+sources/3 = SubResource("TileSetAtlasSource_f4j44")
 
 [node name="Game" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5pymt")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 327680, 11, 65535, 327680, 11, 0, 327680, 11, -65536, 327680, 11, -65538, 327680, 11, -2, 327680, 11, 65534, 327680, 11, 131070, 327680, 11, 131071, 327680, 11, 65536, 327680, 11, 65537, 327680, 11, 1, 327680, 11, -65535, 327680, 11, -131071, 327680, 11, -131072, 327680, 11, -65537, 327680, 11, -131075, 327680, 11, -65539, 327680, 11, -3, 327680, 11, 65533, 327680, 11, 131069, 327680, 11, 196605, 327680, 11, 196606, 327680, 11, 196607, 327680, 11, 131072, 327680, 11, 65538, 327680, 11, 131074, 327680, 11, 131073, 327680, 11, 2, 327680, 11, -65534, 327680, 11, -131070, 327680, 11, -196606, 327680, 11, -196607, 327680, 11, -196608, 327680, 11, -131073, 327680, 11, -131074, 327680, 11)
+layer_0/name = "Floor"
+layer_0/tile_data = PackedInt32Array(-1, 3, 0, 65535, 3, 0, 0, 3, 0, -65536, 3, 0, -65538, 3, 0, -2, 3, 0, 65534, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -131072, 3, 0, -65537, 3, 0, -131075, 3, 0, -65539, 3, 0, -3, 3, 0, 65533, 3, 0, 131069, 3, 0, 196605, 3, 0, 196606, 3, 0, 196607, 3, 0, 131072, 3, 0, 65538, 3, 0, 131074, 3, 0, 131073, 3, 0, 2, 3, 0, -65534, 3, 0, -131070, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, -131073, 3, 0, -131074, 3, 0)
+layer_1/name = "Objects"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(-65538, 131074, 36, -2, 65538, 38, -131071, 196610, 36, -65535, 65538, 38)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_bwh2j")]
 scale = Vector2(2, 2)
