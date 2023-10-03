@@ -14,9 +14,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwsvj"]
-radius = 6.0
-height = 20.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_00k3l"]
+radius = 3.0
 
 [node name="Character" type="CharacterBody2D"]
 script = ExtResource("1_ffhdl")
@@ -26,8 +25,8 @@ sprite_frames = SubResource("SpriteFrames_apx7x")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_rwsvj")
+position = Vector2(-1, 9)
+shape = SubResource("CircleShape2D_00k3l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
