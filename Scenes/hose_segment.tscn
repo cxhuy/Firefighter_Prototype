@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkjqpkcsatk50"]
+[gd_scene load_steps=4 format=3 uid="uid://dkjqpkcsatk50"]
 
+[ext_resource type="Script" path="res://Scripts/hose_segment.gd" id="1_5eq37"]
 [ext_resource type="Texture2D" uid="uid://b0fmxsafffifn" path="res://Sprites/hose.png" id="1_s6klf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tcla"]
@@ -7,6 +8,7 @@ radius = 8.0
 
 [node name="HoseSegment" type="RigidBody2D"]
 gravity_scale = 0.0
+script = ExtResource("1_5eq37")
 
 [node name="Hose" type="Sprite2D" parent="."]
 position = Vector2(0, -4.76837e-07)
