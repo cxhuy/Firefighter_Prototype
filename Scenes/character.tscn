@@ -27,12 +27,17 @@ y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_ffhdl")
 
+[node name="Hose" type="Node2D" parent="."]
+position = Vector2(0, 27)
+script = ExtResource("4_3yu02")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_vsgay")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(1, -9)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_apx7x")
@@ -44,7 +49,3 @@ shape = SubResource("CircleShape2D_00k3l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
-
-[node name="Hose" type="Node2D" parent="."]
-position = Vector2(0, 27)
-script = ExtResource("4_3yu02")
