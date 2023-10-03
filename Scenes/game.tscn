@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://s4o2dk6ut583"]
+[gd_scene load_steps=9 format=3 uid="uid://s4o2dk6ut583"]
 
 [ext_resource type="Texture2D" uid="uid://bogtmgicwrjq8" path="res://Sprites/Background/Room_Builder_free_32x32.png" id="3_0bsnx"]
 [ext_resource type="PackedScene" uid="uid://bxxmbt1qxarmo" path="res://Scenes/character.tscn" id="3_bwh2j"]
 [ext_resource type="Texture2D" uid="uid://cbwug4x2m8qvi" path="res://Sprites/Background/school_floor.png" id="3_ff6b2"]
 [ext_resource type="Texture2D" uid="uid://1x78stexmpjr" path="res://Sprites/Background/Interiors_free_32x32.png" id="4_g6a2c"]
-[ext_resource type="PackedScene" uid="uid://4f4rc0iea683" path="res://Scenes/hose.tscn" id="5_rpqsu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf63m"]
 texture = ExtResource("3_0bsnx")
@@ -3979,7 +3978,3 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(-65538, 131074, 36, -131071, 196610, 36, 65534, 65538, 38, 1, 65538, 38)
 
 [node name="Character" parent="." instance=ExtResource("3_bwh2j")]
-scale = Vector2(1.75, 1.75)
-
-[node name="Hose" parent="." instance=ExtResource("5_rpqsu")]
-position = Vector2(-3, 62)

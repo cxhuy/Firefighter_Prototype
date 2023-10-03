@@ -17,17 +17,41 @@ texture = ExtResource("1_snpp6")
 shape = SubResource("RectangleShape2D_fh7ys")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
-position = Vector2(0, 18)
+position = Vector2(0, 8)
 node_a = NodePath("../HosePoint")
 node_b = NodePath("../HoseSegment")
 
 [node name="HoseSegment" parent="." instance=ExtResource("2_o2s28")]
-position = Vector2(0, 43)
+position = Vector2(0, 23)
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
-position = Vector2(0, 68)
+position = Vector2(0, 38)
 node_a = NodePath("../HoseSegment")
 node_b = NodePath("../HoseSegment2")
 
 [node name="HoseSegment2" parent="." instance=ExtResource("2_o2s28")]
-position = Vector2(0, 93)
+position = Vector2(0, 53)
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(0, 68)
+node_a = NodePath("../HoseSegment2")
+node_b = NodePath("../HoseSegment3")
+
+[node name="HoseSegment3" parent="." instance=ExtResource("2_o2s28")]
+position = Vector2(0, 83)
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(0, 98)
+node_a = NodePath("../HoseSegment3")
+node_b = NodePath("../HoseSegment4")
+
+[node name="HoseSegment4" parent="." instance=ExtResource("2_o2s28")]
+position = Vector2(0, 113)
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+position = Vector2(0, 128)
+node_a = NodePath("../HoseSegment4")
+node_b = NodePath("../HoseSegment5")
+
+[node name="HoseSegment5" parent="." instance=ExtResource("2_o2s28")]
+position = Vector2(0, 143)
