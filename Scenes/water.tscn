@@ -11,7 +11,9 @@ z_index = 1
 script = ExtResource("1_7ks1d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_xt3tb")
 
 [node name="Water" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 1)
 texture = ExtResource("1_a814k")
