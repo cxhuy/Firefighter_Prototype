@@ -12,3 +12,11 @@ func _process(delta):
 	
 func _physics_process(delta):
 	linear_velocity *= friction
+	
+
+func _on_area_2d_body_entered(body):
+	print(body.get_name())
+
+
+func _on_area_2d_body_exited(body):
+	print("exit")
