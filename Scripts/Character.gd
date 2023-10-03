@@ -18,18 +18,18 @@ func spray_water():
 		water.rotation = water_rotation
 	
 func character_movement(delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		anim.flip_h = false
 		velocity.x = speed
 		velocity.y = 0
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("left"):
 		anim.flip_h = true
 		velocity.x = -speed
 		velocity.y = 0
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("down"):
 		velocity.x = 0
 		velocity.y = speed
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("up"):
 		velocity.x = 0
 		velocity.y = -speed
 	elif Input.is_action_pressed("action_water"):
