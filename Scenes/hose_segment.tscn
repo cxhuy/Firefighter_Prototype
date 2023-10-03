@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkjqpkcsatk50"]
+
+[ext_resource type="Texture2D" uid="uid://b0fmxsafffifn" path="res://Sprites/hose.png" id="1_s6klf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tcla"]
+radius = 8.0
+
+[node name="HoseSegment" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0tcla")
+
+[node name="Hose" type="Sprite2D" parent="."]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(1, 1.875)
+texture = ExtResource("1_s6klf")
