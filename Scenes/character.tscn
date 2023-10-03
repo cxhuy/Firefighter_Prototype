@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxxmbt1qxarmo"]
+[gd_scene load_steps=7 format=3 uid="uid://bxxmbt1qxarmo"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_ffhdl"]
 [ext_resource type="Texture2D" uid="uid://cqb0776f0bnh1" path="res://Sprites/Character/Idle/idle_1.png" id="2_r3ryb"]
-[ext_resource type="PackedScene" uid="uid://4f4rc0iea683" path="res://Scenes/hose.tscn" id="3_ggwlp"]
+[ext_resource type="Script" path="res://Scenes/hose.gd" id="4_3yu02"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vsgay"]
+radius = 2.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_apx7x"]
 animations = [{
@@ -24,6 +27,11 @@ y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_ffhdl")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_vsgay")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -9)
 scale = Vector2(1.75, 1.75)
@@ -37,5 +45,6 @@ shape = SubResource("CircleShape2D_00k3l")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
 
-[node name="Hose" parent="." instance=ExtResource("3_ggwlp")]
+[node name="Hose" type="Node2D" parent="."]
 position = Vector2(0, 27)
+script = ExtResource("4_3yu02")
