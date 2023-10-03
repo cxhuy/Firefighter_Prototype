@@ -18,4 +18,3 @@ func _physics_process(delta):
 	var direction = Vector2.RIGHT.rotated(rotation)
 	global_position += speed * direction * delta
 	speed *= 0.95
-	print(speed)
