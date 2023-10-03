@@ -1369,5 +1369,5 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-65538, 131074, 36, -2, 65538, 38, -131071, 196610, 36, -65535, 65538, 38)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_bwh2j")]
-scale = Vector2(2, 2)
+[node name="Character" parent="." instance=ExtResource("3_bwh2j")]
+scale = Vector2(1.75, 1.75)
