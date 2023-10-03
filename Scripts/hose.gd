@@ -1,7 +1,7 @@
 extends Node2D
 
 var hose_segment = preload("res://Scenes/hose_segment.tscn")
-var hose_length = 30
+var hose_length = 50
 var hose_segment_length = 30
 
 func _ready():
