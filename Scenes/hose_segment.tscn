@@ -5,16 +5,17 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tcla"]
 radius = 8.0
-height = 16.0
 
 [node name="HoseSegment" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 2
+mass = 0.1
 gravity_scale = 0.0
 script = ExtResource("1_5eq37")
 
 [node name="Hose" type="Sprite2D" parent="."]
-position = Vector2(-1.19209e-07, 0)
+position = Vector2(-1.19209e-07, 4.17233e-07)
+scale = Vector2(1, 1.875)
 texture = ExtResource("1_s6klf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

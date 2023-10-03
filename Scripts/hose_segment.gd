@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var friction = 0.9
+var friction = 0.95
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
