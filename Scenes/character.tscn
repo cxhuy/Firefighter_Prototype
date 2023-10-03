@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxxmbt1qxarmo"]
+[gd_scene load_steps=6 format=3 uid="uid://bxxmbt1qxarmo"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_ffhdl"]
 [ext_resource type="Texture2D" uid="uid://cqb0776f0bnh1" path="res://Sprites/Character/Idle/idle_1.png" id="2_r3ryb"]
+[ext_resource type="PackedScene" uid="uid://4f4rc0iea683" path="res://Scenes/hose.tscn" id="3_ggwlp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_apx7x"]
 animations = [{
@@ -32,3 +33,7 @@ shape = SubResource("CircleShape2D_00k3l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+
+[node name="Hose" parent="." instance=ExtResource("3_ggwlp")]
+position = Vector2(0, 19)
+scale = Vector2(0.25, 0.25)

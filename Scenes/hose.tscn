@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://4f4rc0iea683"]
+
+[ext_resource type="Texture2D" uid="uid://b0fmxsafffifn" path="res://Sprites/hose.png" id="1_snpp6"]
+[ext_resource type="PackedScene" uid="uid://dkjqpkcsatk50" path="res://Scenes/hose_segment.tscn" id="2_o2s28"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh7ys"]
+size = Vector2(16, 16)
+
+[node name="Hose" type="Node2D"]
+
+[node name="HosePoint" type="StaticBody2D" parent="."]
+
+[node name="Hose" type="Sprite2D" parent="HosePoint"]
+texture = ExtResource("1_snpp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HosePoint"]
+shape = SubResource("RectangleShape2D_fh7ys")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(0, 18)
+node_a = NodePath("../HosePoint")
+node_b = NodePath("../HoseSegment")
+
+[node name="HoseSegment" parent="." instance=ExtResource("2_o2s28")]
+position = Vector2(0, 43)
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(0, 68)
+node_a = NodePath("../HoseSegment")
+node_b = NodePath("../HoseSegment2")
+
+[node name="HoseSegment2" parent="." instance=ExtResource("2_o2s28")]
+position = Vector2(0, 93)

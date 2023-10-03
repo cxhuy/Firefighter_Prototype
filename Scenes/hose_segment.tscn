@@ -6,11 +6,12 @@
 radius = 8.0
 
 [node name="HoseSegment" type="RigidBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_0tcla")
+gravity_scale = 0.0
 
 [node name="Hose" type="Sprite2D" parent="."]
 position = Vector2(0, -4.76837e-07)
 scale = Vector2(1, 1.875)
 texture = ExtResource("1_s6klf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0tcla")
