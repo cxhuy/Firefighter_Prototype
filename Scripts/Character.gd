@@ -33,6 +33,7 @@ func character_movement(delta):
 		velocity.x = 0
 		velocity.y = -speed
 	elif Input.is_action_pressed("action_water"):
+		print(Hose.power)
 		spray_water()
 	else:
 		velocity.x = 0

@@ -16,7 +16,10 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	Hose.hoseTouched += 1
+	Hose.power = 100 - Hose.hoseTouched * 5
 
 
 func _on_area_2d_body_exited(body):
 	Hose.hoseTouched -= 1
+	Hose.power = 100 - Hose.hoseTouched * 5
+	
