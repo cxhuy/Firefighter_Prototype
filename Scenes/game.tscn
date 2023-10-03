@@ -3961,8 +3961,10 @@ sources/2 = SubResource("TileSetAtlasSource_rhsnx")
 sources/3 = SubResource("TileSetAtlasSource_f4j44")
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_5pymt")
 format = 2
 layer_0/name = "Floor"
@@ -3970,10 +3972,10 @@ layer_0/tile_data = PackedInt32Array(-1, 3, 0, 65535, 3, 0, 0, 3, 0, -65536, 3, 
 layer_1/name = "Objects"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
+layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-65538, 131074, 36, -2, 65538, 38, -131071, 196610, 36, -65535, 65538, 38)
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(-65538, 131074, 36, -131071, 196610, 36, 65534, 65538, 38, 1, 65538, 38)
 
 [node name="Character" parent="." instance=ExtResource("3_bwh2j")]
 scale = Vector2(1.75, 1.75)
