@@ -8,15 +8,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass 
+	pass
 	
 func _physics_process(delta):
 	linear_velocity *= friction
 	
 
 func _on_area_2d_body_entered(body):
-	print(body.get_name())
+	Hose.hoseTouched += 1
 
 
 func _on_area_2d_body_exited(body):
-	print("exit")
+	Hose.hoseTouched -= 1
