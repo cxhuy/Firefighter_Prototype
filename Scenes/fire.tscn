@@ -1,0 +1,155 @@
+[gd_scene load_steps=22 format=3 uid="uid://d1afp1tuvjip1"]
+
+[ext_resource type="Texture2D" uid="uid://daoe16s0lohiq" path="res://Sprites/Fire+Sparks-SpriteSheet.png" id="1_68fjg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umvjx"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1uk8"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qvxl"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3q1f"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr83n"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34m4x"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvtop"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2t1s"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(288, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25r88"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(0, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jqbb"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(96, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kjwe"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(192, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1hpi"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(288, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mq6xl"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(0, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w33s4"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(96, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjwmi"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(192, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw6c2"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(288, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbbm8"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(0, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ut0"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(96, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q7cl"]
+atlas = ExtResource("1_68fjg")
+region = Rect2(192, 384, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ysumy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umvjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1uk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qvxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3q1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr83n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34m4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvtop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2t1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25r88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jqbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kjwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1hpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mq6xl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w33s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjwmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw6c2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbbm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1ut0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q7cl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[node name="Fire" type="Node2D"]
+z_index = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -48)
+sprite_frames = SubResource("SpriteFrames_ysumy")
+animation = &"idle"
+autoplay = "idle"
+frame = 5
+frame_progress = 0.479172
