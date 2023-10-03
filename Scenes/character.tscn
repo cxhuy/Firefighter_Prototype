@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxxmbt1qxarmo"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_ffhdl"]
+[ext_resource type="Script" path="res://Scripts/hose.gd" id="2_0pk1a"]
 [ext_resource type="Texture2D" uid="uid://cqb0776f0bnh1" path="res://Sprites/Character/Idle/idle_1.png" id="2_r3ryb"]
-[ext_resource type="Script" path="res://Scenes/hose.gd" id="4_3yu02"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vsgay"]
 radius = 2.0
@@ -29,7 +29,7 @@ script = ExtResource("1_ffhdl")
 
 [node name="Hose" type="Node2D" parent="."]
 position = Vector2(0, 27)
-script = ExtResource("4_3yu02")
+script = ExtResource("2_0pk1a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
